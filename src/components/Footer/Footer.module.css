@@ -1,0 +1,10 @@
+.footer_con{
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    height: 60px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

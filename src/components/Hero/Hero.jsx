@@ -37,7 +37,7 @@ function Hero() {
                         <li><a href=""><FaFacebookF/></a></li>
                     </ul>
                 </div>
-                <Tilt scale={1.2} transitionSpeed={2500} tiltReverse={true}>
+                <Tilt scale={1.2} transitionSpeed={2500} tiltReverse={true} style={{width: '100%', maxWidth:'300px'}}>
                     <div className={styles.hero_img}></div>
                 </Tilt>
             </div>

@@ -6,6 +6,7 @@ function Navbar() {
   const [isToggled, setIsToggled] = useState(false);
 
   function handleToggle(){
+    console.log("isToggled", isToggled);
     setIsToggled(!isToggled);
   }
   return (
@@ -14,8 +15,9 @@ function Navbar() {
         <div className={styles.nav_con}>
           <div className={styles.logo}>
             <a href="">JD PORT</a>
+            <FaBars className={`${styles.bars} ${styles.mobile_display}`} onClick={handleToggle} />
           </div>
-          <ul>
+          <ul className={`${styles.non_mobile}`}>
             <li>
               <a href="">Skills</a>
             </li>
@@ -26,31 +28,30 @@ function Navbar() {
               <a href="">Contact</a>
             </li>
           </ul>
-          <div className={styles.button}>
-            <a href="">hire me</a>
+          <div className={`${styles.non_mobile}`}>
+            <a className={`${styles.button} `} href="">hire me</a>
           </div>
+        
+          {/* Mobile Menu */}
+          {isToggled ? (
+            <>
+            <ul className={`${styles.mobile_menu} ${styles.mobile_display}`}>
+              <li>
+                <a href="">Skills</a>
+              </li>
+              <li>
+                <a href="">Portfolio</a>
+              </li>
+              <li>
+                <a href="">Contact</a>
+              </li>
+            </ul>
+            <div className={`${styles.mobile_display} ${styles.mobile_button}`}>
+              <a className={`${styles.button}`} href="">hire me</a>
+            </div>
+            </>
+          ) : null}
         </div>
-
-        {/* Mobile Menu */}
-        <FaBars className={styles.bars} onClick={handleToggle} />
-        {isToggled ? (
-          <>
-          <ul className={styles.mobile_menu}>
-            <li>
-              <a href="">Skills</a>
-            </li>
-            <li>
-              <a href="">Portfolio</a>
-            </li>
-            <li>
-              <a href="">Contact</a>
-            </li>
-          </ul>
-          <div className={styles.mobile_button}>
-            <a href="">hire me</a>
-          </div>
-          </>
-        ) : null}
       </div>
     </nav>
   );

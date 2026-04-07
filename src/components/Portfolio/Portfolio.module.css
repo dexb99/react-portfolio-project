@@ -1,57 +1,53 @@
-.portfolio_con{
-    background-color: #fff;
-    max-width: 1170px;
-    height: 900px;
-    margin: 0 auto;
-    overflow: hidden;
+.wrapper{
+    & .portfolio_con{
+        padding: var(--con_padding);
 
-    & .portfolio_title{
-        margin-top: 41px;
-        font-size: 32px;
-        text-align: center;
-        font-weight: bold;
-    }
-    
-    & .portfolio_list{
-        margin-top: 50px;
-        display : grid;
-        grid-template-columns: repeat(3, 1fr);
-        justify-items: center;
-        gap: 77px;
+        & .portfolio_title{
+            font-size: 32px;
+            text-align: center;
+            font-weight: bold;
+        }
 
-        & .portfolio_items{
-            & img{
-                width: 300px;
-                height: 300px;
-                border-radius: 20px;
-                object-fit: cover;
-            }
+        & .portfolio_list{
+            margin-top: 50px;
+            display : grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            justify-items: center;
+            gap: 77px;
 
-            & p{
-                margin-top: 10px;
-                font-weight: bold;
-                font-size: 24px;
+            & .portfolio_items{
+                & img{
+                    max-width: 300px;
+                    height: 300px;
+                    border-radius: 20px;
+                    object-fit: cover;
+                }
+
+                & p{
+                    margin-top: 10px;
+                    font-weight: bold;
+                    font-size: 24px;
+                }
             }
         }
     }
 }
 
 @media screen and (max-width : 480px){
-    .portfolio_con{
-        height: auto;
-        /* padding-bottom: 34px; */
-        & .portfolio_list{
-            grid-template-columns: repeat(1, 1fr);
+    .wrapper{
+        & .portfolio_con{
+            & .portfolio_list{
+                grid-template-columns: repeat(1, 1fr);
 
-            & .portfolio_items{
-                padding: 20px;
-                width: 100%;
-
-                & img{
+                & .portfolio_items{
+                    padding: 20px;
                     width: 100%;
+
+                    & img{
+                        width: 100%;
+                    }
                 }
             }
         }
-
     }
 }

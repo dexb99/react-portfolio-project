@@ -1,15 +1,12 @@
 .hero_wrapper{
+    & .hero_con{
+        display : flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 107px 40px;
 
-    & .container{
-        max-width: 1170px;
-        margin: 0 auto;
-
-        & .hero_con{
-            display : flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 107px 40px;
-
+        & .hero_info{
+            max-width: 550px;
             & .text_1{
                 font-size: 32px;
             }
@@ -22,7 +19,6 @@
 
             & .text_3{
                 font-size: 32px;
-                
             }
 
             & .text_4{
@@ -37,7 +33,6 @@
                 gap : 20px;
 
                 & li{
-
                     & svg{
                         height: 32px;
                         width: 32px;
@@ -45,34 +40,28 @@
                     }
                 }
             }
-
-            & .hero_img{
-                height: 300px;
-                width: 300px;
-                border-radius: 100%;
-                background-image: url('https://scontent.fbkk30-2.fna.fbcdn.net/v/t39.30808-6/654087637_1924545991482392_3038812562652541014_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=wxCAe_hQxkYQ7kNvwFz67PU&_nc_oc=Ado8gEvVsOosZ5BRzppLZFi3wy9nIZHBAQrJTJuf1IGJ9ssdntsWS1RF9pey-vUXy9ynto3dz_jHdvakrbkE1H1_&_nc_zt=23&_nc_ht=scontent.fbkk30-2.fna&_nc_gid=_uKbAFeukedDbawJgOcJ-Q&_nc_ss=7a3a8&oh=00_Af3n6dUDrCl0oJ2zDoiXDZO61kSUTqC607-gBvDOjssXfg&oe=69D8C468');
-                background-size: cover;
-                background-position: center;
-                /* margin-right: 120px; */
-            }
         }
 
+        & .hero_img{
+            height: 300px;
+            width: 300px;
+            border-radius: 100%;
+            background-image: url('https://scontent.fbkk30-2.fna.fbcdn.net/v/t39.30808-6/654087637_1924545991482392_3038812562652541014_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=wxCAe_hQxkYQ7kNvwFz67PU&_nc_oc=Ado8gEvVsOosZ5BRzppLZFi3wy9nIZHBAQrJTJuf1IGJ9ssdntsWS1RF9pey-vUXy9ynto3dz_jHdvakrbkE1H1_&_nc_zt=23&_nc_ht=scontent.fbkk30-2.fna&_nc_gid=_uKbAFeukedDbawJgOcJ-Q&_nc_ss=7a3a8&oh=00_Af3n6dUDrCl0oJ2zDoiXDZO61kSUTqC607-gBvDOjssXfg&oe=69D8C468');
+            background-size: cover;
+            background-position: center;
+        }
     }
 }
 
-@media screen and (max-width: 480px ) {
+@media screen and (max-width: 480px) {
     .hero_wrapper{
-        height: auto !important;
+        & .hero_con{
+            flex-direction: column;
+            padding: 70px 20px;
 
-        & .container{
-            & .hero_con{
-                flex-direction: column;
-                padding: 70px 20px;
-
-                & .hero_img{
-                    width: 100% !important;
-                    margin: 0 !important;
-                }
+            & .hero_img{
+                width: 100%;
+                margin: 0;
             }
         }
     }

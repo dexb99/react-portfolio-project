@@ -1,65 +1,54 @@
 .services_wrapper{
-    
-    & .container{
-        max-width: 1170px;
-        margin: 0 auto;
+    & .services_con{
+        min-height: 600px;
+        text-align: center;
+        padding: var(--con_padding);
+        & .services_title{
+            font-size: 32px;
+            font-weight: bold;
+        }
 
-        & .services_con{
-            min-height: 600px;
-            text-align: center;
-            padding: 54px;
-            & .services_title{
-                font-size: 32px; 
-                font-weight: bold;
-            }
-        
-            & .services_list{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-top: 105px;
-                gap: 73px;
-        
-        
-                & .services_items{
-                    width: 264px;
-        
-                    & h4{
-                        font-size: 24px;
-                        font-weight: bold;
-                        margin-top: 15px;
-                        color: var(--primary-background);
-                    }
-        
-                    & p{
-                        margin-top: 29px;
-                        font-size: 16px;
-                    }
-                }
-        
-                & svg{
-                    width: 80px;
+        & .services_list{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 105px;
+            gap: 73px;
+
+            & .services_items{
+                width: 264px;
+
+                & h4{
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-top: 15px;
                     color: var(--primary-background);
-                    height: 80px;
                 }
+
+                & p{
+                    margin-top: 29px;
+                    font-size: 16px;
+                }
+            }
+
+            & svg{
+                width: 80px;
+                color: var(--primary-background);
+                height: 80px;
             }
         }
     }
-        
 }
+
 @media screen and (max-width : 480px){
     .services_wrapper{
-        & .container{
-            
-            & .services_con{
-                height: auto;
-                & .services_list{
-                    flex-direction: column;
-        
-                    & .services_items{
-                        width: 100%;
-                        padding: 0 30px;
-                    }
+        & .services_con{
+            height: auto;
+            & .services_list{
+                & .services_items{
+                    width: 100%;
+                    padding: 0 30px;
                 }
             }
         }

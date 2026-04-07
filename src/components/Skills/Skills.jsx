@@ -1,11 +1,12 @@
 import React from "react";
 import styles from "./Skills.module.css";
-import { FaSquareJs, FaReact, FaSass, FaGitAlt, FaNode } from "react-icons/fa6";
+import { FaSquareJs,  FaGitAlt,  FaPhp } from "react-icons/fa6";
+import { BiLogoJquery } from "react-icons/bi";
 
 function Skill() {
   return (
     <section className={styles.wrapper}>
-    <div className={styles.container}>
+    <div className="container">
       <div className={styles.skills_con}>
         <h3 className={styles.skills_title}>My Skill Set</h3>
         <ul className={styles.skills_list}>
@@ -13,16 +14,13 @@ function Skill() {
               <FaSquareJs />
           </li>
           <li>
-              <FaReact />
-          </li>
-          <li>
-              <FaSass />
+              <BiLogoJquery />
           </li>
           <li>
               <FaGitAlt />
           </li>
           <li>
-              <FaNode />
+              <FaPhp />
           </li>
         </ul>
       </div>

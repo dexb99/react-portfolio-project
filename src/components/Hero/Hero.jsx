@@ -7,7 +7,7 @@ import Tilt from 'react-parallax-tilt';
 function Hero() {
   return (
     <section className={styles.hero_wrapper}>
-        <div className={styles.container}>
+        <div className="container">
             <div className={styles.hero_con}>
                 <div className={styles.hero_info}>
                     <p className={styles.text_1}>Hi, it's me</p>
@@ -29,7 +29,7 @@ function Hero() {
                         
                     </p>
                     <p className={styles.text_4}>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga fugiat commodi <br />quas cupiditate minus dolore nulla eos accusantium labore explicabo.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga fugiat commodi quas cupiditate minus dolore nulla eos accusantium labore explicabo.
                     </p>
                     <ul className={styles.hero_social}>
                         <li><a href=""><FaGithub/></a></li>

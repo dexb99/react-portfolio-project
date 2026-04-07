@@ -1,4 +1,10 @@
 :root{
-    --primary-background: #0085FF;
+    --primary-background: #003D7A;
     --main-text-color : #000;
+    --con_padding : 40px;
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
 }

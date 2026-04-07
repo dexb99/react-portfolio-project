@@ -1,34 +1,35 @@
-.number_con{
-    height: 300px;
-    margin: 0 auto;
+.wrapper{
+    margin-top: 40px;
     background-color: var(--primary-background);
     color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 90px;
-    margin-top: 80px;
+    & .number_con{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 90px;
+        padding: var(--con_padding);
 
-    & .number_items{
-        text-align: center;
-        font-weight: bold;
+        & .number_items{
+            text-align: center;
+            font-weight: bold;
 
-        & h3{
-            font-size: 48px;
-        }
+            & h3{
+                font-size: 48px;
+            }
 
-        & p{
-            font-size: 24px;
+            & p{
+                font-size: 24px;
+            }
         }
     }
 }
 
 @media screen and (max-width : 480px){
-    .number_con{
-        height: auto;
-        flex-direction: column;
-        padding: 20px;
-        gap: 45px;
+    .wrapper{
+        & .number_con{
+            padding: 20px;
+            gap: 45px;
+        }
     }
-
 }
